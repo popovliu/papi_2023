@@ -1,0 +1,191 @@
+.papiin_heading01{
+    @extend %heading01;
+	@include small-pad-width{
+		font-size: 46px; line-height: 1.3; font-weight: 700;
+	}
+}
+.papiin_heading02{
+    @extend %heading02;
+	@include small-pad-width{
+		font-size: 28px; line-height: 1.3; font-weight: 700;
+	}
+}
+.papiin_body1_bold{
+    @extend %heading09;
+	@include small-pad-width{
+		font-size: 15px; line-height: 1.5; font-weight: 700;
+	}
+}
+section{
+	padding-top: 64px;
+	padding-bottom: 128px;
+	@include small-pad-width{
+		padding-top: 32px;
+		padding-bottom: 64px;
+	}
+}
+.section__inner{
+    position: relative;
+	margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    max-width: 1024px;
+	@include small-pad-width{
+		padding-left: 20px;
+    	padding-right: 20px;
+	}
+}
+.papiin_chatitem{
+    align-items: flex-end;
+    margin-bottom: 20px;
+    .papiin_chatitem__inner{
+        padding: 20px;
+        border: 2px solid $p_gray01;
+        background: $p_white;
+		@include small-pad-width{
+			width: 100%;
+		}
+    }
+    .papiin_chattail{
+        flex-basis: 20px;
+    }
+}
+.about_sec_title{
+	position: relative;
+	margin-bottom: 40px;
+	@include small-pad-width{
+		margin-bottom: 24px;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    $SECTION
+\*------------------------------------*/
+.about__header{
+	.about__header__inner{
+		display: flex;
+		height: 190px;
+		justify-content: center;
+		align-items: center;
+		background-image: url(../images/img_header_bg.jpg);
+		background-position: center center;
+		background-size: cover;
+		color: $p-white;
+	}
+}
+.about__whatis{
+    .about_sec_title{
+		align-items: center;
+    }
+    .papiin_logo{
+        width: 274px;
+        margin-bottom: 20px;
+		@include small-pad-width{
+			width: 158px;
+		}
+    }
+	.papiin_logoimg{
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include small-pad-width{
+			display: none;
+		}
+	}
+	.papiin_chatlist{
+		position: relative;
+	}
+	.title_img{
+		display: none;
+		@include small-pad-width{
+			display: block;
+			flex-basis: 140px;
+		}
+	}
+	.title_text{
+		@include small-pad-width{
+			flex-grow: 1;
+		}
+	}
+}
+.about__num{
+	.papiin_numitem{
+		padding-top: 56px;
+		padding-bottom: 56px;
+		flex-grow: 1;
+		@include small-pad-width{
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+	}
+	.numimg{
+		width: 30%;
+		margin: 0 auto;
+		margin-bottom: 12px;
+	}
+}
+.about__identity{
+	background-image: url(../images/img_identity_bg.jpg);
+	overflow-x: hidden;
+	.about_sec_content{
+		flex-grow: 1;
+	}
+	.about_sec_title{
+		display: flex;
+		height: 535px;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+	.identity_title{
+		padding: 8px 12px;
+		background-color: $p_gray01;
+		color: $p-white;
+	}
+	.identity_subtitle{
+		padding: 8px 12px;
+		background-color: $p_white;
+	}
+	.identitytext{
+		position: relative;
+		margin-bottom: -12px;
+		display: flex;
+		align-items: flex-end
+	}
+	.identityimg{
+		position: absolute;
+	}
+	.papiin_chatitem{
+		margin-bottom: 48px;
+	}
+	.papiin_agents{
+		align-items: center;
+		.identitytext_inner{
+		}
+		.identityimg{
+			width: 1000px;
+			top: 0;
+			right: 0;
+			margin-right: 148px;
+		}
+	}
+	.papiin_client{
+		align-items: center;
+		.identitytext_inner{
+		}
+		.identityimg{
+			width: 1000px;
+			top: 0;
+			left: 0;
+			margin-left: 24px;
+		}
+
+	}
+}
+.about__vision{}
+.about__contact{
+	background-image: url(../images/img_contact_bg.jpg);
+}

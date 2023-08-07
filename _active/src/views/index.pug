@@ -1,0 +1,94 @@
+extends includes/_base.pug
+block about__panel
+	//關於我們＿＿標題
+	.about__header
+		.about__header__inner
+			h1.papiin_heading01 關於我們
+	//關於我們＿＿內容
+	.about__body
+		.about__body__inner
+			//papiin是什麼
+			section.about__whatis
+				.section__inner
+					div.papiin_logoimg
+						img(class="" src="assets/images/img_whatis.jpg" alt="")
+					div.about_sec_title.d-flex
+						.title_text
+							div.papiin_logo
+								img(class="" src="assets/images/icon_plogo.svg" alt="")
+							h2.papiin_heading02
+								|是什麼？
+						.title_img
+							img(class="" src="assets/images/img_whatis.jpg" alt="")
+					div.about_sec_content
+						.papiin_chatlist
+							.papiin_chatitem.d-flex
+								.papiin_chatitem__inner.papiin_body1_bold
+									|PaPiin 是台灣新創的影視作品平台
+									br.d-none.d-md-block
+									|獨家打造最適合影視從業人員的作品展示空間
+								img(class="papiin_chattail" src="assets/images/icon_chattail_right.svg" alt="")
+							.papiin_chatitem.d-flex
+								img(class="papiin_chattail" src="assets/images/icon_chattail_left.svg" alt="")
+								.papiin_chatitem__inner.papiin_body1_bold
+									|PaPiin 致力於打造台灣最完整的影視資料庫與人才庫
+							.papiin_chatitem.d-flex
+								.papiin_chatitem__inner.papiin_body1_bold
+									|你可以在 PaPiin 快速找到
+									br.d-none.d-md-block
+									|合作夥伴與工作機會，並掌握最新產業動態
+								img(class="papiin_chattail" src="assets/images/icon_chattail_right.svg" alt="")
+
+			//papiin營運數字
+			section.about__num
+				.section__inner
+					div.about_sec_title
+						h2.papiin_heading02.text-center
+							|PaPiin 2021年底營運至今
+							br
+							|已累積超過...
+					div.about_sec_content
+						.papiin_numlist.d-sm-flex
+							.papiin_numitem
+								.numimg
+									img(class="" src="assets/images/icon_num01.svg" alt="")
+								.numtitle
+									.papiin_heading01.text-center.js-counter
+										|2000
+								.numtext
+									.papiin_body1_bold.text-center
+										|部商案類型影視作品
+							.papiin_numitem 
+								.numimg
+									img(class="" src="assets/images/icon_num02.svg" alt="")
+								.numtitle
+									.papiin_heading01.text-center.js-counter
+										|600
+								.numtext
+									.papiin_body1_bold.text-center
+										|部商案類型影視作品
+							.papiin_numitem 
+								.numimg
+									img(class="" src="assets/images/icon_num03.svg" alt="")
+								.numtitle
+									.papiin_heading01.text-center.js-counter
+										|110
+								.numtext
+									.papiin_body1_bold.text-center
+										|部商案類型影視作品
+
+			//如果你是
+			section.about__identity
+				include pages/_identity.pug
+				
+			//papiin平台願景
+			section.about__vision
+				.section__inner
+					div.about_sec_title
+						h2.papiin_heading02.text-center
+							|PaPiin 平台願景
+
+			//聯繫我們
+			section.about__contact
+				.section__inner
+	.about__footer

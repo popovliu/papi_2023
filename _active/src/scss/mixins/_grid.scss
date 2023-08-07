@@ -1,0 +1,122 @@
+//先針對media queries的width設為變數
+$pc-media:1140px;
+$pcs-media:1139px;
+$pad-media:980px;
+$pads-media:979px;
+$smallpad-media:768px;
+$smallpads-media:767px;
+$phone-media:640px;
+$phones-media:639px;
+// 把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，並且使用我上面設立的變數來調動media queries的width
+
+//電腦
+@mixin pc-width() {
+	@media all and (min-width: $pc-media) {
+		@content;
+	}
+}
+
+//平板
+@mixin pad-width() {
+	@media all and (max-width: $pcs-media) {
+		@content;
+	}
+}
+
+//小平板
+@mixin small-pad-width() {
+	@media all and (max-width: $smallpads-media) {
+		@content;
+	}
+}
+
+//手機
+@mixin phone-width() {
+	@media all and (max-width: $phones-media) {
+		@content;
+	}
+}
+
+
+//實際引用
+// .div1{
+// 	//電腦版
+//    @include pc-width{
+// 		  padding:20px;
+//    }
+//    //平板
+//    @include pad-width{
+// 		 padding:10px;
+// 	}
+//    //小平板
+//    @include small-pad-width{
+// 		 padding:5px;
+// 	}
+//    //手機
+//    @include phone-width{
+// 		 padding:0px;
+// 	}
+// }
+
+
+
+//繼續延伸上面的media queries 的mixin code
+
+//padding responsive的mixin
+@mixin responsive-padding($pc, $pad, $small-pad, $phone) {
+
+	//電腦版
+	@include pc-width {
+		padding: $pc;
+	}
+
+	//平板
+	@include pad-width {
+		padding: $pad;
+	}
+
+	//小平板
+	@include small-pad-width {
+		padding: $small-pad;
+	}
+
+	//手機
+	@include small-pad-width {
+		padding: $phone;
+	}
+}
+
+//margin responsive的mixin
+@mixin responsive-margin($pc, $pad, $small-pad, $phone) {
+
+	//電腦版
+	@include pc-width {
+		margin: $pc;
+	}
+
+	//平板
+	@include pad-width {
+		margin: $pad;
+	}
+
+	//小平板
+	@include small-pad-width {
+		margin: $small-pad;
+	}
+
+	//手機
+	@include small-pad-width {
+		margin: $phone;
+	}
+}
+
+// div1{
+// //＠include responsive-padding(電腦,平板,小平板，手機)   帶入4個padding的值
+// @include responsive-padding(20px,10px,5px,0px);
+// }
+
+
+// div2{
+// //＠include responsive-margin(電腦,平板,小平板，手機)   帶入4個margin的值
+// @include responsive-margin(20px,10px,5px,0px);
+// }

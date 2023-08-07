@@ -1,0 +1,143 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * CONTENTS............You're reading it!
+ * TYPOGRAPHY..........Including global settings, headings, body text, lists, and more
+ * COLOR...............Font color & background color
+ * RESET...............Set our reset defaults
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+%heading01          { font-size: 58px; line-height: 1.3; font-weight: 700;}
+%heading02          { font-size: 46px; line-height: 1.3; font-weight: 700;}
+%heading03			{ font-size: 36px; line-height: 1.3; font-weight: 700;}
+%heading04			{ font-size: 34px; line-height: 1.3; font-weight: 700;}
+%heading05			{ font-size: 32px; line-height: 1.3; font-weight: 700;}
+%heading06			{ font-size: 28px; line-height: 1.3; font-weight: 700;}
+%heading07			{ font-size: 26px; line-height: 1.3; font-weight: 700;}
+%heading08			{ font-size: 24px; line-height: 1.3; font-weight: 700;}
+%heading08-reg		{ font-size: 24px; line-height: 1.3; font-weight: 400;}
+%heading09			{ font-size: 20px; line-height: 1.3; font-weight: 700;}
+%heading10			{ font-size: 18px; line-height: 1.3; font-weight: 700;}
+
+
+%body1_bold     	{ font-size: 15px; line-height: 1.5; font-weight: 700;}
+%body1_med		    { font-size: 15px; line-height: 1.5; font-weight: 500;}
+%body1_reg          { font-size: 15px; line-height: 1.5; font-weight: 400;}   
+
+
+%body2_bold     	{ font-size: 14rem; line-height: 1.5; font-weight: 700;}
+%body2_med			{ font-size: 14rem; line-height: 1.5; font-weight: 500;}
+%body2_reg          { font-size: 14rem; line-height: 1.5; font-weight: 400;}
+
+
+%cap1-reg           { font-size: 13px; line-height: 1.5; font-weight: 400;}
+%cap2-reg           { font-size: 12px; line-height: 1.5; font-weight: 400;}
+
+/*------------------------------------*\
+    $COLOR
+\*------------------------------------*/
+
+
+$p_gray01: #0A111A;
+$p_gray02: #252B33 ;
+$p_gray02_2: #323A44;
+$p_gray03: #5B687B;
+$p_gray04: #848E9C;
+$p_gray05: #929599;
+$p_gray06: #B3B5B8;
+$p_gray07: #CCCCCC;
+$p_gray08: #D9D9D9;
+$p_gray09: #E6E6E6;
+$p_gray10: #F2F2F2;
+$p_gray11: #F7F7F7;
+$p_gray12: #FAFAFA;
+$p_white: #FFFFFF;
+
+$text_01: $p_gray02;
+$text_02: $p_gray05;
+$text_03: $p_gray07;
+
+// .text-dark                          { color: $black }
+// .text-light 						{ color: #fff; }
+// .text-gray                          { color: $gray-40; }
+// .text-purple						{ color: $ace-purple !important;}
+// .text-blue  						{ color: $ace-blue !important;}
+// .text-orange						{ color: $ace-orange !important;}
+// .text-green 						{ color: $ace-green !important;}
+// .text-primary						{ color: $yellow-primary !important;}
+// .text-secondary                     { color: $yellow-secondary !important;}
+// .text-yellow-light					{ color: $yellow-light !important;}
+
+// .bg-dark                            { background-color: $black !important; }
+// .bg-light                           { background-color: #fff !important; }
+// .bg-gray90                          { background-color: $gray-90; }
+// .bg-gray80                          { background-color: $gray-80; }
+// .bg-gray60                          { background-color: $gray-60; }
+// .bg-gray40                          { background-color: $gray-40; }
+// .bg-gray10                          { background-color: $gray-10; }
+// .bg-yellow-primary                  { background-color: $yellow-primary;}
+// .bg-yellow-light                    { background-color: $yellow-light;}
+
+
+
+
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    font-size: 16px;
+    font-family: Roboto,"Noto Sans TC","Century Gothic", Helvetica, Arial, Verdana, 新細明體;
+}
+img{
+    width: 100%;
+}
+.clearfix::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+ul{
+    padding-inline-start: 1rem;
+}
+li{
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+hr{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+button,
+button:active,
+button:focus, 
+button:hover,
+.btn,
+.btn:active, 
+.btn:focus, 
+.btn:hover {
+    outline: none !important;
+    box-shadow: none;
+ }
+ h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0;
+}
+/*------------------------------------*\
+    $SECTION
+\*------------------------------------*/
