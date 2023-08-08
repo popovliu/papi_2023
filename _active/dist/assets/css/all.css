@@ -185,6 +185,13 @@ section {
   }
 }
 
+.p-button {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  color: #F1341C;
+  padding: 12px 20px;
+}
+
 /*------------------------------------*\
     $SECTION
 \*------------------------------------*/
@@ -271,12 +278,17 @@ section {
 
 .about__identity {
   background-image: url(../images/img_identity_bg.jpg);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .about__identity .about_sec_content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+@media all and (max-width: 767px) {
+  .about__identity .about_sec_content {
+    width: 100%;
+  }
 }
 .about__identity .about_sec_title {
   display: -webkit-box;
@@ -289,10 +301,28 @@ section {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media all and (max-width: 767px) {
+  .about__identity .about_sec_title {
+    width: 100%;
+    height: auto;
+    padding-top: 57%;
+    margin-bottom: 48px;
+  }
+}
 .about__identity .identity_title {
   padding: 8px 12px;
   background-color: #0A111A;
   color: #FFFFFF;
+}
+.about__identity .identityicon {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+@media all and (max-width: 767px) {
+  .about__identity .identityicon {
+    -ms-flex-preferred-size: 48px;
+        flex-basis: 48px;
+  }
 }
 .about__identity .identity_subtitle {
   padding: 8px 12px;
@@ -314,16 +344,33 @@ section {
 .about__identity .papiin_chatitem {
   margin-bottom: 48px;
 }
+@media all and (max-width: 767px) {
+  .about__identity .papiin_chatitem {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .about__identity .papiin_agents {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media all and (max-width: 767px) {
+  .about__identity .papiin_agents {
+    margin-bottom: 48px;
+  }
 }
 .about__identity .papiin_agents .identityimg {
   width: 1000px;
   top: 0;
   right: 0;
   margin-right: 148px;
+}
+@media all and (max-width: 767px) {
+  .about__identity .papiin_agents .identityimg {
+    width: 150%;
+    margin-right: 9%;
+  }
 }
 .about__identity .papiin_client {
   -webkit-box-align: center;
@@ -336,8 +383,15 @@ section {
   left: 0;
   margin-left: 24px;
 }
+@media all and (max-width: 767px) {
+  .about__identity .papiin_client .identityimg {
+    width: 150%;
+    margin-left: 9%;
+  }
+}
 
 .about__vision {
+  overflow: hidden;
   background-image: url(../images/img_vision2_bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -350,6 +404,16 @@ section {
   background-size: 768px;
   padding: 120px 0;
 }
+@media all and (max-width: 767px) {
+  .about__vision .about_sec_content {
+    background-image: none;
+    padding: 0;
+    background-image: url(../images/img_vision_bg_m.jpg);
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 48px;
+  }
+}
 .about__vision .vision_content_now {
   margin-bottom: 40px;
 }
@@ -359,6 +423,12 @@ section {
 .about__vision .vision_content_now .visionlist_text {
   background-color: #F1341C;
   border-top-left-radius: 80px;
+}
+@media all and (max-width: 767px) {
+  .about__vision .vision_content_now .visionlist_text {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 80px;
+  }
 }
 .about__vision .vision_content_now .visionimg_inner {
   position: absolute;
@@ -375,10 +445,22 @@ section {
   background-color: #0096FF;
   border-top-right-radius: 80px;
 }
+@media all and (max-width: 767px) {
+  .about__vision .vision_content_short .visionlist_text {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 80px;
+  }
+}
 .about__vision .vision_content_short .visionimg_inner {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media all and (max-width: 767px) {
+  .about__vision .vision_content_short .visionlist_icon {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
 }
 .about__vision .vision_content_long .visionlist_title {
   color: #252B33;
@@ -386,6 +468,12 @@ section {
 .about__vision .vision_content_long .visionlist_text {
   background-color: #252B33;
   border-bottom-left-radius: 80px;
+}
+@media all and (max-width: 767px) {
+  .about__vision .vision_content_long .visionlist_text {
+    border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 80px;
+  }
 }
 .about__vision .vision_content_long .visionimg_inner {
   position: absolute;
@@ -403,23 +491,46 @@ section {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media all and (max-width: 767px) {
+  .about__vision .visionlist_icon {
+    -ms-flex-preferred-size: 48px;
+        flex-basis: 48px;
+  }
+}
 .about__vision .visionlist_content {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media all and (max-width: 767px) {
+  .about__vision .visionlist_content {
+    width: 100%;
+  }
 }
 .about__vision .visionlist {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   position: relative;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   -ms-flex-preferred-size: 640px;
       flex-basis: 640px;
 }
+@media all and (max-width: 767px) {
+  .about__vision .visionlist {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
 .about__vision .visionlist_text {
   padding: 48px 48px 40px 48px;
   margin-bottom: 0;
   color: #FFFFFF;
+}
+@media all and (max-width: 767px) {
+  .about__vision .visionlist_text {
+    padding: 32px 32px 16px 32px;
+  }
 }
 .about__vision .visionlist_title {
   background-color: #F2F2F2;
@@ -447,6 +558,13 @@ section {
 }
 .about__contact .papiin_sns {
   margin-bottom: 180px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about__contact .papiin_sns a {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 .about__contact .papiin_groupimg {
   width: 60%;
@@ -456,4 +574,22 @@ section {
   .about__contact .papiin_groupimg {
     width: 100%;
   }
+}
+
+.about__footer {
+  position: sticky;
+  bottom: 0;
+}
+.about__footer .papiin_footertext {
+  color: #FFFFFF;
+}
+.about__footer .about__footer__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F1341C;
+  padding: 16px;
 }/*# sourceMappingURL=all.css.map */

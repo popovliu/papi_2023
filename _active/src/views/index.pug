@@ -91,9 +91,10 @@ block about__panel
 						h2.papiin_heading02.text-center
 							|PaPiin 平台願景
 					div.about_sec_content
+						//-now
 						div.vision_content.vision_content_now.d-flex
 							//-AOS
-							.visionlist.d-flex(data-aos="fade-right")
+							.visionlist.d-flex.align-items-md-end(data-aos="fade-right")
 								.visionlist_content
 									.visionlist_title.papiin_heading03
 										|NOW
@@ -101,30 +102,40 @@ block about__panel
 										li 專屬影視幕後人員的作品展示平台。
 										li 輕鬆建立屬於自己的作品集頁面。
 										li 透過作品串連影視產業人脈資源。
-								.visionlist_icon
-									img(class="" src="assets/images/icon_visiontail_red.svg" alt="")
-							.visionimg
+
+								.visionlist_icon.d-flex.flex-column
+									.visionlist_icon_up.mb-auto.d-md-none
+										img(class="" src="assets/images/img_vision_red_m.png" alt="")
+									.visionlist_icon_down
+										img(class="" src="assets/images/icon_visiontail_red.svg" alt="")
+
+							.visionimg.d-md-block.d-none
 								.visionimg_inner 
 									img(class="" src="assets/images/img_vision_red.png" alt="")
-
+						//-short
 						div.vision_content.vision_content_short.d-flex
-							.visionimg
+							.visionimg.d-md-block.d-none
 								.visionimg_inner 
 									img(class="" src="assets/images/img_vision_blue.png" alt="")
 							//-AOS
-							.visionlist.d-flex(data-aos="fade-left")
-								.visionlist_icon
-									img(class="" src="assets/images/icon_visiontail_blue.svg" alt="")
-								.visionlist_content
+							.visionlist.d-flex.align-items-md-end(data-aos="fade-left")
+
+								.visionlist_icon.d-flex.flex-column.order-1.order-md-0
+									.visionlist_icon_up.mb-auto.d-md-none
+										img(class="" src="assets/images/img_vision_blue_m.png" alt="")
+									.visionlist_icon_down
+										img(class="" src="assets/images/icon_visiontail_blue.svg" alt="")
+
+								.visionlist_content.order-0.order-md-1
 									.visionlist_title.papiin_heading03
 										|短期目標
 									ul.visionlist_text.papiin_body1_bold
 										li 引入影像需求方在 PaPiin 上發案，開發專屬影視產業的一站式媒合系統。
 										li 建立 PaPiin 線上社群，並舉辦線下小聚，促進影視產業內交流互動。
-
+						//-long
 						div.vision_content.vision_content_long.d-flex
 							//-AOS
-							.visionlist.d-flex(data-aos="fade-right")
+							.visionlist.d-flex.align-items-md-end(data-aos="fade-right")
 								.visionlist_content
 									.visionlist_title.papiin_heading03
 										|NOW
@@ -132,9 +143,14 @@ block about__panel
 										li 打造台灣最大的影視資料庫、人才庫。
 										li 打造台灣影視產業幕後人員線上社群。
 										li 打造專屬影視產業的一站式媒合平台。
-								.visionlist_icon
-									img(class="" src="assets/images/icon_visiontail_gray.svg" alt="")
-							.visionimg
+
+								.visionlist_icon.d-flex.flex-column
+									.visionlist_icon_up.mb-auto.d-md-none
+										img(class="" src="assets/images/img_vision_gray_m.png" alt="")
+									.visionlist_icon_down
+										img(class="" src="assets/images/icon_visiontail_gray.svg" alt="")
+
+							.visionimg.d-md-block.d-none
 								.visionimg_inner
 									img(class="" src="assets/images/img_vision_gray.png" alt="")
 			//聯繫我們
@@ -145,11 +161,26 @@ block about__panel
 						h2.papiin_heading02.text-center
 							|聯繫我們
 					div.about_sec_content
-						h3.papiin_body1_bold.text-center
+						h3.papiin_body1_bold.text-center.mb-5
 							|若有合作想法或其他需求，歡迎聯繫我們的信箱，我們將盡快與您聯繫，感謝！
 							br
 							|PaPiin 聯絡信箱｜contact@papiin.com
 						.papiin_sns.d-flex
-						.papiin_groupimg 
+							a(href="")
+								img(class="" src="assets/images/icon_ig.png" alt="")
+							a(href="") 
+								img(class="" src="assets/images/icon_fb.png" alt="")
+							a(href="") 
+								img(class="" src="assets/images/icon_line.png" alt="")
+							a(href="") 
+								img(class="" src="assets/images/icon_mail.png" alt="")
+						//-AOS
+						.papiin_groupimg
 							img(class="" src="assets/images/img_contact_people.png" alt="")
 	.about__footer
+		.about__footer__inner.d-flex
+			.papiin_body1_bold.papiin_footertext.mr-3
+				|Let's PaPiin！一起拍片！
+			botton(class="p-button btn")
+				.papiin_body1_bold
+					|立即加入 PaPiin !

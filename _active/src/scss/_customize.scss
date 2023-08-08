@@ -63,7 +63,12 @@ section{
 		margin-bottom: 24px;
 	}
 }
-
+.p-button{
+	background-color: $p-white;
+	border-radius: 50px;
+	color: $p-red02;
+	padding: 12px 20px;
+}
 
 
 
@@ -98,6 +103,9 @@ section{
 		position: absolute;
 		right: 0;
 		top: 0;
+		// @include pad-width{
+		// 	width: 50%;
+		// }
 		@include small-pad-width{
 			display: none;
 		}
@@ -136,20 +144,35 @@ section{
 }
 .about__identity{
 	background-image: url(../images/img_identity_bg.jpg);
-	overflow-x: hidden;
+	overflow: hidden;
 	.about_sec_content{
 		flex-grow: 1;
+		@include small-pad-width{
+			width: 100%;
+		}
 	}
 	.about_sec_title{
 		display: flex;
 		height: 535px;
 		flex-grow: 1;
 		flex-shrink: 0;
+		@include small-pad-width{
+			width: 100%;
+			height: auto;
+			padding-top: 57%;
+			margin-bottom: 48px;
+		}
 	}
 	.identity_title{
 		padding: 8px 12px;
 		background-color: $p_gray01;
 		color: $p-white;
+	}
+	.identityicon{
+		flex-shrink: 1;
+		@include small-pad-width{
+			flex-basis: 48px;
+		}
 	}
 	.identity_subtitle{
 		padding: 8px 12px;
@@ -166,16 +189,27 @@ section{
 	}
 	.papiin_chatitem{
 		margin-bottom: 48px;
+		@include small-pad-width{
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 	.papiin_agents{
 		align-items: center;
 		.identitytext_inner{
+		}
+		@include small-pad-width{
+			margin-bottom: 48px;
 		}
 		.identityimg{
 			width: 1000px;
 			top: 0;
 			right: 0;
 			margin-right: 148px;
+			@include small-pad-width{
+				width: 150%;
+				margin-right: 9%;
+			}
 		}
 	}
 	.papiin_client{
@@ -187,11 +221,16 @@ section{
 			top: 0;
 			left: 0;
 			margin-left: 24px;
+			@include small-pad-width{
+				width: 150%;
+				margin-left: 9%;
+			}
 		}
 
 	}
 }
 .about__vision{
+	overflow: hidden;
 	background-image: url(../images/img_vision2_bg.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -202,6 +241,15 @@ section{
 		background-repeat: no-repeat;
 		background-size: 768px;
 		padding: 120px 0;
+		@include small-pad-width{
+			background-image: none;
+			padding: 0;
+			background-image: url(../images/img_vision_bg_m.jpg);
+			background-position: right;
+			background-repeat: repeat-y;
+			background-size: 48px;
+			// padding: 120px 0;
+		}
 	}
 	.vision_content_now{
 		margin-bottom: 40px;
@@ -211,8 +259,11 @@ section{
 		.visionlist_text{
 			background-color: $p-red02;
 			border-top-left-radius: 80px;
+			@include small-pad-width{
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 80px;
+			}
 		}
-
 		.visionimg_inner{
 			position: absolute;
 			top: 0;
@@ -227,12 +278,20 @@ section{
 		.visionlist_text{
 			background-color: $p-blue02;
 			border-top-right-radius: 80px;
+			@include small-pad-width{
+				border-top-right-radius: 0px;
+				border-bottom-left-radius: 80px;
+			}
 		}
-
 		.visionimg_inner{
 			position: absolute;
 			top: 0;
 			left: 0;
+		}
+		.visionlist_icon{
+			@include small-pad-width{
+				transform:scaleX(-1);
+			}
 		}
 	}
 	.vision_content_long{
@@ -242,8 +301,11 @@ section{
 		.visionlist_text{
 			background-color: $p-gray02;
 			border-bottom-left-radius: 80px;
+			@include small-pad-width{
+				border-bottom-left-radius: 0px;
+				border-bottom-left-radius: 80px;
+			}
 		}
-
 		.visionimg_inner{
 			position: absolute;
 			top: 0;
@@ -258,20 +320,32 @@ section{
 	}
 	.visionlist_icon{
 		flex-shrink: 0;
+		@include small-pad-width{
+			flex-basis: 48px;
+		}
 	}
 	.visionlist_content{
 		position: relative;
+		flex-grow: 1;
+		@include small-pad-width{
+			width: 100%;
+		}
 	}
 	.visionlist{
-		align-items: flex-end;
 		position: relative;
 		flex-shrink: 1;
 		flex-basis: 640px;
+		@include small-pad-width{
+			flex-grow: 1;
+		}
 	}
 	.visionlist_text{
 		padding: 48px 48px 40px 48px;
 		margin-bottom: 0;
 		color: $p-white;
+		@include small-pad-width{
+			padding: 32px 32px 16px 32px ;
+		}
 	}
 	.visionlist_title{
 		background-color: $p_gray10;
@@ -298,6 +372,11 @@ section{
 	}
 	.papiin_sns{
 		margin-bottom: 180px;
+		justify-content: center;
+		a{
+			margin-left: 16px;
+			margin-right: 16px;
+		}
 	}
 	.papiin_groupimg{
 		width: 60%;
@@ -305,5 +384,18 @@ section{
 		@include phone-width{
 			width: 100%;
 		}
+	}
+}
+.about__footer{
+	position: sticky;
+	bottom: 0;
+	.papiin_footertext{
+		color: $p-white;
+	}
+	.about__footer__inner{
+		align-items: center;
+		justify-content: center;
+		background-color: $p-red02;
+		padding: 16px;
 	}
 }

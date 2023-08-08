@@ -1,6 +1,6 @@
 .section__inner
 
-	.papiin_agents.d-flex
+	.papiin_agents.d-flex.flex-column.flex-md-row
 		.about_sec_title
 			//-AOS
 			.identityimg(data-aos="fade-right")
@@ -24,41 +24,46 @@
 					img(class="" src="assets/images/icon_arrowright.svg" alt="")
 		.about_sec_content
 			.papiin_chatlist.d-flex.flex-column
-				.papiin_chatitem.d-flex
+				//-AOS
+				.papiin_chatitem.d-flex(data-aos="fade-left" data-aos-duration="100")
 					.papiin_chatitem__inner.papiin_body1_bold
 						|透過作品串接產業人脈資源
 					img(class="papiin_chattail" src="assets/images/icon_chattail_right.svg" alt="")
-				.papiin_chatitem.d-flex
+				//-AOS
+				.papiin_chatitem.d-flex(data-aos="fade-left" data-aos-duration="200")
 					img(class="papiin_chattail" src="assets/images/icon_chattail_left.svg" alt="")
 					.papiin_chatitem__inner.papiin_body1_bold
 						|掌握產業最新動態
-				.papiin_chatitem.d-flex.align-self-end
+				//-AOS
+				.papiin_chatitem.d-flex.align-md-self-end(data-aos="fade-left" data-aos-duration="300")
 					.papiin_chatitem__inner.papiin_body1_bold
 						|尋找潛在合作對象
 					img(class="papiin_chattail" src="assets/images/icon_chattail_right.svg" alt="")
 
 
 
-	.papiin_client.d-flex
-		.about_sec_content
+	.papiin_client.d-flex.flex-column.flex-md-row
+		.about_sec_content.order-1.order-md-0
 			.papiin_chatlist
-				.papiin_chatitem.d-flex
+				//-AOS
+				.papiin_chatitem.d-flex(data-aos="fade-right" data-aos-duration="100")
 					.papiin_chatitem__inner.papiin_body1_bold
 						|在 PaPiin 上發案、提供需求，讓製作公司主動聯繫你！
 					img(class="papiin_chattail" src="assets/images/icon_chattail_right.svg" alt="")
-				.papiin_chatitem.d-flex
+				//-AOS
+				.papiin_chatitem.d-flex(data-aos="fade-right" data-aos-duration="200")
 					img(class="papiin_chattail" src="assets/images/icon_chattail_left.svg" alt="")
 					.papiin_chatitem__inner.papiin_body1_bold
 						|從 PaPiin 篩選出特定風格類型的影片，直接聯繫製作團隊！
-		.about_sec_title
+		.about_sec_title.order-0.order-md-1
 			//-AOS
 			.identityimg(data-aos="fade-left")
 				img(class="" src="assets/images/img_identityred.png" alt="")
 			//-AOS
 			.identitytext
-				.identityicon
+				.identityicon.order-1.order-md-0
 					img(class="" src="assets/images/icon_arrowleft.svg" alt="")
-				.identitytext_inner
+				.identitytext_inner.order-0.order-md-1
 					div.d-flex
 						.identity_subtitle.papiin_body1_bold
 							|如果你是...
