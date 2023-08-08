@@ -68,6 +68,8 @@ $text_01: $p_gray02;
 $text_02: $p_gray05;
 $text_03: $p_gray07;
 
+$p-red02: #F1341C;
+$p-blue02: #0096FF;
 // .text-dark                          { color: $black }
 // .text-light 						{ color: #fff; }
 // .text-gray                          { color: $gray-40; }
@@ -116,8 +118,9 @@ ul{
     padding-inline-start: 1rem;
 }
 li{
-    margin-bottom: 0.5rem;
-    list-style: none;
+    margin-bottom: 1rem;
+    // list-style: none;
+    margin-left: 1.5rem;
 }
 hr{
     margin-top: 2rem;

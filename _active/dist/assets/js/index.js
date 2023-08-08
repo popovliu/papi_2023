@@ -3,4 +3,5 @@ $(document).ready(function(){
         delay: 10,
         time: 800
     });
+    AOS.init();
 });
